@@ -1,0 +1,12 @@
+MAS sequence_auction {
+
+	infrastructure: Centralised
+
+	environment: env.AuctionEnvironment
+	
+	agents:
+		administrator;
+
+	aslSourcePath:
+		"src/asl";
+}
