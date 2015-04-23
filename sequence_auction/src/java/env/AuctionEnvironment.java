@@ -7,6 +7,7 @@ import jason.asSyntax.Term;
 import jason.environment.Environment;
 
 import java.awt.Point;
+import java.awt.Toolkit;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class AuctionEnvironment extends Environment {
 
 	private final Map<String, List<Point>> ki = Maps.newHashMap();
 
-	public final static int environmentSize = 1000;
+	public final static int environmentSize = 3*(int)Toolkit.getDefaultToolkit().getScreenSize().getHeight()/4;
 
 	private AuctionView view;
 
@@ -35,8 +36,10 @@ public class AuctionEnvironment extends Environment {
 	public void init(String[] args) {
 		super.init(args);
 
-		robots.put("robot1", new Point(250, 250));
-		robots.put("robot2", new Point(750, 750));
+		int robot1Position = environmentSize / 4;
+		robots.put("robot1", new Point(robot1Position, robot1Position));
+		int robot2Position = 3 * environmentSize / 4;
+		robots.put("robot2", new Point(robot2Position, robot2Position));
 
 		initPoints();
 

@@ -11,6 +11,7 @@ import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.awt.Insets;
 import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -125,20 +126,20 @@ public class AuctionView extends JFrame {
 
 		private void drawRobot(Point position, Graphics2D g2d, String name) {
 			g2d.setColor(Color.blue);
-			g2d.fillOval(position.x, position.y, 20, 20);
-			g2d.drawString(name, position.x - 5, position.y - 5);
+			g2d.fillOval(position.x, position.y, 12, 12);
+			g2d.drawString(name, position.x - 3, position.y - 3);
 		}
 
 		private void drawTask(Point position, Graphics2D g2d, String id) {
 			g2d.setColor(Color.red);
-			g2d.fillRect(position.x, position.y, 20, 20);
-			g2d.drawString(id, position.x - 5, position.y - 5);
+			g2d.fillRect(position.x, position.y, 12, 12);
+			g2d.drawString(id, position.x - 3, position.y - 3);
 
 		}
 
 		public void drawLine(Point from, Point to, Graphics2D g2d) {
 			g2d.setColor(Color.GREEN);
-			g2d.drawLine(from.x + 10, from.y + 10, to.x + 10, to.y + 10);
+			g2d.drawLine(from.x + 6, from.y + 6, to.x + 6, to.y + 6);
 
 		}
 	}
