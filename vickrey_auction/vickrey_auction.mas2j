@@ -1,0 +1,15 @@
+MAS vickrey_auction {
+
+	infrastructure: Centralised
+
+	environment: env.VickreyEnvironment
+	
+	agents:
+		bidder1 bidder;
+		bidder2 bidder;
+		bidder3 bidder;
+		auctioneer;
+		
+	aslSourcePath:
+		"src/asl";
+}
